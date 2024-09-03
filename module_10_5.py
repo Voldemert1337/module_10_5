@@ -19,8 +19,8 @@ end = datetime.datetime.now() - start
 print("Линейное выполнение заняло:", end)
 """
 if __name__ == '__main__':
+    start_1 = datetime.datetime.now()
     with multiprocessing.Pool(processes=4) as pool:
-        start_1 = datetime.datetime.now()
         data_list = pool.map(read_info, files)
 
     end_1 = datetime.datetime.now() - start
